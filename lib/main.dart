@@ -5,6 +5,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:todo_c7_mon/providers/list_provider.dart';
 import 'package:todo_c7_mon/ui/screens/home/home.dart';
+import 'package:todo_c7_mon/ui/screens/update_screen.dart';
 import 'package:todo_c7_mon/utils/my_theme_data.dart';
 
 void main() async {
@@ -40,7 +41,8 @@ class MyApp extends StatelessWidget {
       ],
       locale: Locale("en"),
       routes: {
-       Home.routeName: (_) => Home()
+       Home.routeName: (_) => Home(),
+        UpdateScreen.routename:(_)=>UpdateScreen()
       },
       initialRoute: Home.routeName,
     );

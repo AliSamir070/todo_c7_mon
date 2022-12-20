@@ -38,4 +38,27 @@ class ListProvider extends ChangeNotifier {
     selectedDate = newDate;
     getTodosFromFirestore();
   }
+  UpdateTodoToFirestore(TodoDM todo){
+    FirebaseFirestore.instance.collection("todos").doc(todo.id).update(
+      {
+        'id':todo.id,
+        'title':todo.title,
+        'description':todo.description,
+        'date':todo.date.millisecondsSinceEpoch,
+        'isDone':todo.isDone
+      }
+    ).timeout(Duration(milliseconds: 500) , onTimeout: (){
+      getTodosFromFirestore();
+    });
+  }
+  UpdateDone(TodoDM todo){
+    FirebaseFirestore.instance.collection("todos").doc(todo.id).update(
+      {
+        "isDone":true
+      }
+    ).timeout(Duration(milliseconds: 500) , onTimeout: (){
+      getTodosFromFirestore();
+      notifyListeners();
+    });
+  }
 }

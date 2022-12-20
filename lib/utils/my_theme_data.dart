@@ -33,6 +33,8 @@ class MyThemeData {
       titleMedium: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: primirayColor),
       titleSmall: TextStyle(fontSize: 16, fontWeight: FontWeight.normal, color: Colors.black54),
       bodySmall: TextStyle(color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold ),
+      bodyMedium: TextStyle(color: Colors.black , fontSize: 20 , fontWeight: FontWeight.bold),
+      headlineSmall: TextStyle(color: lightGreen,fontSize: 22,fontWeight: FontWeight.bold)
 
     )
   );
@@ -53,6 +55,8 @@ class MyThemeData {
           titleMedium: TextStyle(fontSize: 25, fontWeight: FontWeight.w600, color: Colors.white),
           titleSmall: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white),
          bodySmall: TextStyle(color: accentColorDark, fontSize: 18, ),
+          bodyMedium: TextStyle(color: Colors.white , fontSize: 20 , fontWeight: FontWeight.bold),
+          headlineSmall: TextStyle(color: lightGreen,fontSize: 22,fontWeight: FontWeight.bold)
 
       )
   );
